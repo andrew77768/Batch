@@ -5,7 +5,8 @@ set SUBFILENAMETEMP=%ComputerName%_ITInfo_Temp.txt
 set SUBFILENAME=%ComputerName%_ITInfo.txt
 
 REM Don't touch below
-if exist "%DIR%%SUBFILENAMETEMP%" exit
+if exist "%DIR%%SUBFILENAME%" exit
+if exist "%DIR%%SUBFILENAMETEMP%" del "%DIR%%SUBFILENAMETEMP%"
 
 whoami >> %DIR%%SUBFILENAMETEMP%
 REM systeminfo | find "System Boot Time:" >> %DIR%%SUBFILENAMETEMP%
