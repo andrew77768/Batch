@@ -16,7 +16,7 @@ ipconfig | findstr IPv6 >> %DIR%%SUBFILENAME%
 echo. >> %DIR%%SUBFILENAME%
 wmic bios get name,serialnumber,version /value |more >> %DIR%%SUBFILENAME% 
 wmic csproduct get name,identifyingnumber,uuid /value |more >> %DIR%%SUBFILENAME% 
-wmic cpu get name,CurrentClockSpeed,MaxClockSpeed /every:1 /value |more >> %DIR%%SUBFILENAME% 
+wmic cpu get name,CurrentClockSpeed,MaxClockSpeed /value |more >> %DIR%%SUBFILENAME% 
 echo.   >> %DIR%%SUBFILENAME%.
 
 if exist "C:\Program Files\Microsoft Office\Office16\" cscript "C:\Program Files\Microsoft Office\Office16\OSPP.VBS" /dstatus  | findstr /C:"Last" /C:"LICENSE NAME"  >> %DIR%%SUBFILENAME%
