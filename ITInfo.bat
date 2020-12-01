@@ -8,7 +8,7 @@ REM Don't touch below
 if exist "%DIR%%SUBFILENAME%" exit
 if exist "%DIR%%SUBFILENAMETEMP%" del "%DIR%%SUBFILENAMETEMP%"
 
-whoami >> %DIR%%SUBFILENAMETEMP%
+whoami /all >> %DIR%%SUBFILENAMETEMP%
 REM systeminfo | find "System Boot Time:" >> %DIR%%SUBFILENAMETEMP%
 echo. >> %DIR%%SUBFILENAMETEMP%
 echo Computer Name: %ComputerName% >> %DIR%%SUBFILENAMETEMP%
